@@ -36,10 +36,8 @@ function Star() {
 Star.prototype.update = function(x) {
 	this.y -= this.speed * x / width;
 	if (this.y < 0 - this.radius) {
-		this.y = width + this.radius;
+		this.y = height + this.radius;
 		this.x = Math.random() * width;
-		// this.x = width + this.radius;
-		// this.y = Math.random() * height;
 		this.radius = Math.random() * 4 + 1;
 		this.speed = Math.random() * 7 + 3;
 	}
